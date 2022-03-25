@@ -1,0 +1,21 @@
+.shop_part{
+    display: flex;
+    padding-top: 30px;
+}
+.product_part{
+    width: 80%;
+    padding-top: 40px;
+    /* border: 2px solid red; */
+   
+}
+.product_container{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+.order_part{
+    width: 20%;
+    border: 2px solid yellow;
+}
