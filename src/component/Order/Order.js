@@ -3,7 +3,7 @@ import './Order.css';
 
 const Order = (props) => {
     // console.log(props)
-    const {chooseElement}=props;
+    const {chooseElement,resetElement,removeElement}=props;
     return (
         <div className='order_head'>
             <h3>Selected Cycle</h3>
@@ -16,13 +16,13 @@ const Order = (props) => {
                         <div className="item_name">
                              <p>{item.name}</p>
                         </div>
-                        <button>DELETE</button>
+                        <button onClick={()=>removeElement(item)}>DELETE</button>
                     </div>
                 )
             }
 
 <button type="button" onClick={chooseElement} className="btn btn-success">CHOOSE ONE FOR ME</button>
-<button type="button" className="btn btn-secondary">CHOOSE AGIN</button>
+<button type="button" onClick={resetElement} className="btn btn-secondary">CHOOSE AGIN</button>
             
         </div>
     );

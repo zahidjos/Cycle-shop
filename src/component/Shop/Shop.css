@@ -19,5 +19,6 @@
     width: 20%;
     background: #f1d1d1;
     padding: 20px 0;
+    position: sticky;
     /* border: 2px solid yellow; */
 }

@@ -24,6 +24,19 @@ const Shop = () => {
 
           setItem([item[chooseProduct]]);
     }
+    const resetElement=()=>{
+       setItem([])
+    }
+    console.log(item)
+    const removeElement=(itemRemove)=>{
+        
+       let removePosition= item.indexOf(itemRemove);
+       item.splice(removePosition,1);
+       console.log(item)
+       setItem([...item]);
+      
+       
+    }
 
     return (
         <div className='shop_part'>
@@ -36,7 +49,7 @@ const Shop = () => {
            
             </div>
             <div className="order_part">
-            <Order item={item} key={item.id} chooseElement={chooseElement}></Order>
+            <Order item={item} key={item.id} chooseElement={chooseElement} resetElement={resetElement} removeElement={removeElement}></Order>
 
             </div>
            
