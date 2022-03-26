@@ -19,6 +19,11 @@
     width: 20%;
     background: #f1d1d1;
     padding: 20px 0;
-    position: sticky;
+    
     /* border: 2px solid yellow; */
 }
+.order_part .btn{
+   margin: 10px 0;
+   width: 70%;
+}
+

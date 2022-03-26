@@ -12,10 +12,27 @@ const Shop = () => {
         .then(res=>res.json())
         .then(data=>setCard(data))
     },[])
+
     const[item,setItem]=useState([])
-    console.log(item)
+    // console.log(item)
+
     const addToCard=(product)=>{
+       if(item.length>0){
+           for(const singleItem of item){
+               if(singleItem.id==product.id){
+                   alert("This item already added");
+                   setItem([...item])
+               }
+               else{
+                setItem([...item,product]);
+               }
+           }
+       }
+       else{
         setItem([...item,product]);
+       }
+        
+    // setItem([...item,product]);
             }
 
     const chooseElement=()=>{
@@ -27,12 +44,12 @@ const Shop = () => {
     const resetElement=()=>{
        setItem([])
     }
-    console.log(item)
+    // console.log(item)
     const removeElement=(itemRemove)=>{
         
        let removePosition= item.indexOf(itemRemove);
        item.splice(removePosition,1);
-       console.log(item)
+    //    console.log(item)
        setItem([...item]);
       
        
@@ -49,8 +66,14 @@ const Shop = () => {
            
             </div>
             <div className="order_part">
-            <Order item={item} key={item.id} chooseElement={chooseElement} resetElement={resetElement} removeElement={removeElement}></Order>
+            <h3>Selected Cycle</h3>
+            {item.map((oneItem)=>
+                <Order item={oneItem} key={oneItem.id}   removeElement={removeElement}></Order>
+            )}
+            
 
+            <button type="button" onClick={chooseElement} className="btn btn-success">CHOOSE ONE FOR ME</button>
+            <button type="button" onClick={resetElement} className="btn btn-secondary">CHOOSE AGIN</button>
             </div>
            
            

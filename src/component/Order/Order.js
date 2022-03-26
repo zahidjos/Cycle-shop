@@ -1,28 +1,28 @@
 import React from 'react';
 import './Order.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 const Order = (props) => {
-    // console.log(props)
-    const {chooseElement,resetElement,removeElement}=props;
+   console.log(props)
+    const {removeElement,item}=props;
+   
+    
     return (
         <div className='order_head'>
-            <h3>Selected Cycle</h3>
-            {
-                props.item.map((item)=>
-                    <div className="order_item">
+             <div className="order_item">
                         <div className="item_img">
                           <img src={item.image} alt="" />
                         </div>
                         <div className="item_name">
                              <p>{item.name}</p>
+                             
                         </div>
-                        <button onClick={()=>removeElement(item)}>DELETE</button>
+                        <button onClick={()=>removeElement(item)}><FontAwesomeIcon icon= {faTrash}/></button>
                     </div>
-                )
-            }
+                
+            
 
-<button type="button" onClick={chooseElement} className="btn btn-success">CHOOSE ONE FOR ME</button>
-<button type="button" onClick={resetElement} className="btn btn-secondary">CHOOSE AGIN</button>
             
         </div>
     );
