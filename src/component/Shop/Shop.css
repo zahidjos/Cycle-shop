@@ -4,7 +4,7 @@
 }
 .product_part{
     width: 80%;
-    padding-top: 40px;
+    padding: 40px 0 ;
     /* border: 2px solid red; */
    
 }
@@ -17,5 +17,7 @@
 }
 .order_part{
     width: 20%;
-    border: 2px solid yellow;
+    background: #f1d1d1;
+    padding: 20px 0;
+    /* border: 2px solid yellow; */
 }

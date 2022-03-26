@@ -1,0 +1,25 @@
+.order_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+}
+.item_img{
+    width: 20%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+}
+.item_img img{
+    width: 100%;
+    max-width: 100%;
+}
+.item_name p{
+    line-height: 30px;
+    padding-top: 5px;
+    
+}
+.order_head .btn{
+    margin: 10px 0;
+    width: 70%;
+}
