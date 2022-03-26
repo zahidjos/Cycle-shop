@@ -31,9 +31,7 @@ const Shop = () => {
        else{
         setItem([...item,product]);
        }
-        
-    // setItem([...item,product]);
-            }
+          }
 
     const chooseElement=()=>{
           let chooseItem=Math.random();
