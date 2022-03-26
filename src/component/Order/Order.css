@@ -1,3 +1,4 @@
+
 .order_item{
     display: flex;
     align-items: center;
@@ -22,4 +23,6 @@
 .order_head .btn{
     margin: 10px 0;
     width: 70%;
+    
+    
 }

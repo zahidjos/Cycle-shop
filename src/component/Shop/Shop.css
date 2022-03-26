@@ -1,6 +1,7 @@
 .shop_part{
     display: flex;
     padding-top: 30px;
+    /* position: relative; */
 }
 .product_part{
     width: 80%;
@@ -19,6 +20,12 @@
     width: 20%;
     background: #f1d1d1;
     padding: 20px 0;
+    
+    position:sticky;
+    top: 10px;
+    
+    
+    
     
     /* border: 2px solid yellow; */
 }

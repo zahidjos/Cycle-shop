@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Order from '../Order/Order';
 import Product from '../Product/Product';
+import Question from '../Question/Question';
 import './Shop.css'
 
 const Shop = () => {
@@ -54,6 +55,7 @@ const Shop = () => {
     }
 
     return (
+        <div>
         <div className='shop_part'>
             <div className="product_part">
                 <div className="product_container">
@@ -73,6 +75,12 @@ const Shop = () => {
             <button type="button" onClick={chooseElement} className="btn btn-success">CHOOSE ONE FOR ME</button>
             <button type="button" onClick={resetElement} className="btn btn-secondary">CHOOSE AGIN</button>
             </div>
+           
+           
+           
+        </div>
+        
+        <Question></Question>
            
            
         </div>

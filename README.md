@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-hi
+Cycle shop
 =======
-hi
->>>>>>> 345cf463717cde4f9c884ee87590f1d2260a1e92
+
+site link: https://spiffy-biscuit-549162.netlify.app/#
+
+
